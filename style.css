@@ -84,7 +84,7 @@ button {
     transition: background-color .3s;
 }
 
-.history {
+.archives {
     flex-grow: 1;
     text-transform: uppercase;
 }
