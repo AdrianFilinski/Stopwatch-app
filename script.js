@@ -51,8 +51,19 @@ const handleStop = () => {
 
 const handlePause = () => {
     clearInterval(countTime)
+
+}
+
+
+const handleReset = () => {
+    handleStop();
+    time.style.visibility = 'hidden';
+    timesArr.splice(0, timesArr.length);
+    console.log(timesArr)
+
 }
 
 startBtn.addEventListener('click', handleStart)
 pauseBtn.addEventListener('click', handlePause)
 stopBtn.addEventListener('click', handleStop)
+resetBtn.addEventListener('click', handleReset)
