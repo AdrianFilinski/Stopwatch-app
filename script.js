@@ -47,6 +47,7 @@ const handleStop = () => {
     timeList.textContent = '';
     seconds = 0;
     minutes = 0;
+    innerHTML
 }
 
 const handlePause = () => {
@@ -70,7 +71,7 @@ const showHistory = () => {
         const newTime = document.createElement('li');
         newTime.innerHTML = `Pomiar nr ${num}: <span>${time}</span>`
 
-        timeList.append(newTime);
+        timeList.appendChild(newTime);
         num++;
     })
 }
