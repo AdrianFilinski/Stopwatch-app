@@ -47,7 +47,7 @@ const handleStop = () => {
     timeList.textContent = '';
     seconds = 0;
     minutes = 0;
-    innerHTML
+
 }
 
 const handlePause = () => {
@@ -76,8 +76,19 @@ const showHistory = () => {
     })
 }
 
+const showModal = () => {
+    if (!(modalShadow.style.display === 'block')) {
+        modalShadow.style.display = 'block';
+    } else {
+        modalShadow.style.display = 'none';
+    }
+    modalShadow.classList.toggle('modal-animation')
+}
+
 startBtn.addEventListener('click', handleStart)
 pauseBtn.addEventListener('click', handlePause)
 stopBtn.addEventListener('click', handleStop)
 resetBtn.addEventListener('click', handleReset)
 archivesBtn.addEventListener('click', showHistory)
+infoBtn.addEventListener('click', showModal)
+closeModalBtn.addEventListener('click', showModal)
